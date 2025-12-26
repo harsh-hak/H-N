@@ -9,11 +9,11 @@ const LockScreen = ({ onUnlock }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password === '108') {
+    if (password === '23') {
       onUnlock();
     } else {
       setError(true);
-      setTimeout(() => setError(false), 500);
+      setTimeout(() => setError(false), 1000);
       setPassword('');
     }
   };
