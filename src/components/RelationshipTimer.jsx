@@ -59,7 +59,7 @@ const RelationshipTimer = () => {
             </div>
 
             <div className="timer-grid">
-                {timeUnits.map((unit, index) => (
+                {timeUnits.map((unit) => (
                     <div key={unit.label} className="timer-box">
                         <span className="timer-value">{unit.value}</span>
                         <span className="timer-label">{unit.label}</span>
@@ -67,7 +67,7 @@ const RelationshipTimer = () => {
                 ))}
             </div>
             <p className="timer-footer">...and counting every second</p>
-        </motion.div>
+        </motion.div >
     );
 };
 

@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 
 const HeartRain = () => {
-    const hearts = useMemo(() => {
-        return Array.from({ length: 50 }).map((_, i) => ({
+    const [hearts, setHearts] = React.useState([]);
+
+    React.useEffect(() => {
+        const newHearts = Array.from({ length: 50 }).map((_, i) => ({
             id: i,
             left: Math.random() * 100, // percentage
             duration: Math.random() * 5 + 5, // 5-10 seconds
@@ -12,6 +14,7 @@ const HeartRain = () => {
             size: Math.random() * 20 + 10,
             color: Math.random() > 0.5 ? "#ff4d6d" : "#ff8fa3"
         }));
+        setHearts(newHearts);
     }, []);
 
     return (

@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import ReactPlayer from 'react-player/youtube';
+import React, { useState } from 'react';
+import ReactPlayer from 'react-player';
 import { Music, Pause, Play, Volume2, VolumeX } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
