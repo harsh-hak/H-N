@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@200;300;400;500;600&display=swap');
+
+:root {
+  --bg-color: #0f0c29;
+  --bg-gradient: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  --primary-color: #ff4d6d;
+  --accent-color: #ff8fa3;
+  --text-color: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  min-height: 100vh;
+  overflow: hidden; /* To prevent scrollbars from falling hearts */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+input, button {
+  font-family: 'Outfit', sans-serif;
+}
+
+.title-font {
+  font-family: 'Great Vibes', cursive;
+}
