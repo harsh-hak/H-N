@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Music, Pause, Play, Volume2, VolumeX } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import loveSong from '../assets/love_song.mp3';
+import loveSong from '../assets/love_song.m4a';
 
 const MusicPlayer = () => {
     const [isPlaying, setIsPlaying] = useState(false);
