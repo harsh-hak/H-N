@@ -4,6 +4,8 @@ import { Cake, Music, Star, ArrowDown, Heart } from 'lucide-react';
 import HeartRain from './HeartRain';
 import PhotoGallery from './PhotoGallery';
 import MusicPlayer from './MusicPlayer';
+import RelationshipTimer from './RelationshipTimer';
+import ProposalHeart from './ProposalHeart';
 import './BirthdayPage.css';
 
 const BirthdayPage = () => {
@@ -47,6 +49,8 @@ const BirthdayPage = () => {
                     <p className="signature">- Forever yours, Harsh, your husband</p>
                 </motion.div>
 
+                <RelationshipTimer />
+
                 <motion.div
                     className="floating-icons"
                     initial={{ opacity: 0 }}
@@ -74,6 +78,7 @@ const BirthdayPage = () => {
 
             <PhotoGallery />
             <MusicPlayer />
+            <ProposalHeart />
         </div>
     );
 };

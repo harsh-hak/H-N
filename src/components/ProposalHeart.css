@@ -1,0 +1,135 @@
+.proposal-container {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 1000;
+    pointer-events: none;
+    /* Allow clicks to pass through wrapper */
+}
+
+.floating-heart-trigger {
+    cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pulse-heart {
+    position: relative;
+    filter: drop-shadow(0 0 15px rgba(255, 77, 109, 0.6));
+}
+
+.pop-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+/* Modal-like overlay for the proposal */
+.proposal-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    /* Override framer motion for centering */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 4px solid #ff4d6d;
+    min-width: 300px;
+    pointer-events: auto;
+    z-index: 2000;
+}
+
+.marry-me-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    color: #ff4d6d;
+    margin: 0;
+    line-height: 1.2;
+    background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sub-proposal {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 1rem 0 2rem 0;
+}
+
+.hearts-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    animation: sparkleAnim 2s infinite;
+}
+
+.s1 {
+    top: -20px;
+    right: -20px;
+    animation-delay: 0.2s;
+}
+
+.s2 {
+    bottom: -10px;
+    left: -10px;
+    animation-delay: 0.5s;
+}
+
+@keyframes sparkleAnim {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 600px) {
+    .proposal-container {
+        bottom: 80px;
+        right: 20px;
+    }
+
+    .proposal-message {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .marry-me-text {
+        font-size: 3.5rem;
+    }
+}
