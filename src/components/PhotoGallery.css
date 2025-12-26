@@ -30,13 +30,11 @@
     padding: 1rem 1rem 3rem 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transform-origin: center;
-    cursor: grab;
     position: relative;
     transition: z-index 0s;
 }
 
-.polaroid-card:active {
-    cursor: grabbing;
+.polaroid-card:hover {
     z-index: 100;
 }
 

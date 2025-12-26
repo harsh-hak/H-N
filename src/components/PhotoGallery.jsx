@@ -35,9 +35,6 @@ const PhotoGallery = () => {
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ delay: index * 0.2, duration: 0.6 }}
                         whileHover={{ scale: 1.05, rotate: 0, zIndex: 10 }}
-                        drag
-                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-                        dragElastic={0.2}
                         style={{ rotate: photo.rot }}
                     >
                         <div className="photo-frame">
