@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Heart, Sparkles } from 'lucide-react';
+import { Heart, Sparkles, X } from 'lucide-react';
 import './ProposalHeart.css';
 
 const ProposalHeart = () => {
@@ -52,6 +52,9 @@ const ProposalHeart = () => {
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ type: "spring", stiffness: 200, damping: 20 }}
                     >
+                        <button onClick={() => setIsPopped(false)} className="close-btn">
+                            <X size={24} color="#ff4d6d" />
+                        </button>
                         <div className="sparkles">
                             <Sparkles size={40} color="#FFD700" className="sparkle s1" />
                             <Sparkles size={30} color="#FFD700" className="sparkle s2" />
@@ -66,7 +69,7 @@ const ProposalHeart = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </div >
     );
 };
 

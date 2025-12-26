@@ -118,6 +118,34 @@
     }
 }
 
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    border: 2px solid #ff4d6d;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 2001;
+    padding: 0;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg) scale(1.1);
+    background: #ff4d6d;
+}
+
+.close-btn:hover svg {
+    stroke: white;
+}
+
 @media (max-width: 600px) {
     .proposal-container {
         bottom: 80px;
