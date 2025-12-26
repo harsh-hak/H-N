@@ -1,37 +1,35 @@
 import React, { useState } from 'react';
-import ReactPlayer from 'react-player';
 import { Music, Pause, Play, Volume2, VolumeX } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import loveSong from '../assets/love_song.mp3';
 
 const MusicPlayer = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
     const [hasInteracted, setHasInteracted] = useState(false);
+    const audioRef = React.useRef(null);
 
     const togglePlay = () => {
+        const audio = audioRef.current;
+        if (isPlaying) {
+            audio.pause();
+        } else {
+            audio.play().catch(e => console.log("Playback failed:", e));
+        }
         setIsPlaying(!isPlaying);
         setHasInteracted(true);
     };
 
     const toggleMute = () => {
+        const audio = audioRef.current;
+        audio.muted = !isMuted;
         setIsMuted(!isMuted);
     };
 
     return (
         <div style={{ position: 'fixed', bottom: '20px', left: '20px', zIndex: 100, display: 'flex', gap: '10px', alignItems: 'center' }}>
             {/* Hidden Player */}
-            <div style={{ display: 'none' }}>
-                <ReactPlayer
-                    url='https://www.youtube.com/watch?v=MqazV4hbu8E'
-                    playing={isPlaying}
-                    loop={true}
-                    volume={1}
-                    muted={isMuted}
-                    width="0"
-                    height="0"
-                    playsinline={true}
-                />
-            </div>
+            <audio ref={audioRef} loop src={loveSong} />
 
             <motion.button
                 onClick={togglePlay}
